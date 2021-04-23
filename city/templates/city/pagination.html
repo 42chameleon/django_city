@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% for name in page_obj.object_list %}
+    <p>{{ name }}</p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    {% for p in person %}
+            <div class="card mt-3" style="width: 18rem;">
+                <div class="card-body">
+                      <h3 class="card-title">Маями: {{ p.name }}</h3>
+              </div>
+            </div>
+    {% endfor %}
+{% endblock %}

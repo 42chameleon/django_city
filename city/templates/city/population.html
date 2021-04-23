@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% for c in city %}
+            <div class="card mt-3" style="width: 18rem;">
+                <div class="card-body">
+                      <h2 class="card-title">{{ c }}</h2>
+              </div>
+            </div>
+        {% endfor %}
+    {% endblock %}
