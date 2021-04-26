@@ -1,4 +1,5 @@
 from django.db.models import F, Count
+from django.db.models.functions import Concat
 from django.shortcuts import render
 from .models import City, Person, Event
 from django.views.generic import ListView
@@ -49,4 +50,4 @@ class EventView(ListView):
     paginate_by = 3
 
     def get_queryset(self):
-        return Event.objects.all().order_by('start_date')
+        return Event.objects.all().annotate(dates=Concat('start_date__date', 'end_date__date')).order_by('dates')
