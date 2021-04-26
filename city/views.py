@@ -49,4 +49,4 @@ class EventView(ListView):
     paginate_by = 3
 
     def get_queryset(self):
-        return Event.objects.all().order_by('-start_date')
+        return Event.objects.all().order_by('start_date')
